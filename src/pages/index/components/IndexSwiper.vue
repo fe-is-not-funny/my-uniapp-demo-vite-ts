@@ -1,17 +1,9 @@
 <!--
  * @Date: 2023-05-05 23:16:32
  * @LastEditors: ibegyourpardon
- * @LastEditTime: 2023-05-05 23:20:56
+ * @LastEditTime: 2023-05-05 23:37:56
  * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/components/IndexSwiper.vue
 -->
-// create a new component which receive props from parent component
-// the props is [
-{
-  "title": "xxxx",
-  "imgUrl": "https://img.yzcdn.cn/vant/apple-1.jpg",
-}, ...]
-// the swiper component is from uniapp
-// Path: src/pages/index/components/IndexSwiper.vue
 
 <template class="container">
   <swiper autoplay="true" indicator-dots="true">

@@ -1,34 +1,46 @@
 <!--
  * @Date: 2023-03-20 15:48:19
  * @LastEditors: ibegyourpardon
- * @LastEditTime: 2023-05-05 23:22:47
- * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/index.vue
--->
-<!--
- * @Date: 2023-03-20 15:48:19
- * @LastEditors: ibegyourpardon
- * @LastEditTime: 2023-05-05 23:18:37
+ * @LastEditTime: 2023-05-06 00:19:08
  * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/index.vue
 -->
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
+    <view class="header"
+      :style="{
+        height: `${capsuleButtonBottom}px`,
+        backgroundColor: 'green',
+        width: '100%',
+        // paddingBottom: '10px'
+      }"
+    >
+      <text class="title">
+        班主任能力提升
+      </text>
+  </view>
     <SearchBar />
     <IndexSwiper />
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import SearchBar from './components/SearchBar.vue';
 import IndexSwiper from './components/IndexSwiper.vue';
+
+import { getCapsuleButtonInfo } from '@/utils/screen.js';
+
 const title = ref('Hello')
+
+console.log(getCapsuleButtonInfo())
+
+const capsuleButtonBottom = computed(() => {
+  return getCapsuleButtonInfo().height + getCapsuleButtonInfo().top + 10
+})
+
 </script>
 
-<style>
+<style scoped>
 .content {
   display: flex;
   flex-direction: column;
@@ -36,22 +48,17 @@ const title = ref('Hello')
   justify-content: center;
 }
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
+.header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .title {
-  font-size: 36rpx;
-  color: #8f8f94;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
+
 </style>

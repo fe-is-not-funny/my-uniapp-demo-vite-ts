@@ -3,13 +3,32 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "ooooooops"
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom",
+			}
+		},
+		{
+			"path": "pages/sspx/index",
+			"style": {
+				"navigationBarTitleText": "赛事培训"
+			}
+		},
+		{
+			"path": "pages/fabu/index",
+			"style": {
+				"navigationBarTitleText": "发布"
+			}
+		},
+		{
+			"path": "pages/zl/index",
+			"style": {
+				"navigationBarTitleText": "专栏"
 			}
 		},
 		{
 			"path": "pages/profile/index",
 			"style": {
-				"navigationBarTitleText": "profile"
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
@@ -30,6 +49,24 @@
 				"text": "首页",
 				"iconPath": "static/images/home.png",
 				"selectedIconPath": "static/images/home-active.png"
+			},
+			{
+				"pagePath": "pages/sspx/index",
+				"text": "赛事培训",
+				"iconPath": "static/images/sspx.png",
+				"selectedIconPath": "static/images/sspx-active.png"
+			},
+			{
+				"pagePath": "pages/fabu/index",
+				"text": "发布",
+				"iconPath": "static/images/fabu.png",
+				"selectedIconPath": "static/images/fabu-active.png"
+			},
+			{
+				"pagePath": "pages/zl/index",
+				"text": "专栏",
+				"iconPath": "static/images/zl.png",
+				"selectedIconPath": "static/images/zl-active.png"
 			},
 			{
 				"pagePath": "pages/profile/index",
