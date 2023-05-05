@@ -1,14 +1,22 @@
+<!--
+ * @Date: 2023-03-20 15:48:19
+ * @LastEditors: ibegyourpardon
+ * @LastEditTime: 2023-05-05 23:18:37
+ * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/index.vue
+-->
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
+    <IndexSwiper />
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import IndexSwiper from './components/IndexSwiper.vue';
 const title = ref('Hello')
 </script>
 
