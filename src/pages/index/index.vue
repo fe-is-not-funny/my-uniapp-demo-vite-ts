@@ -1,6 +1,12 @@
 <!--
  * @Date: 2023-03-20 15:48:19
  * @LastEditors: ibegyourpardon
+ * @LastEditTime: 2023-05-05 23:22:47
+ * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/index.vue
+-->
+<!--
+ * @Date: 2023-03-20 15:48:19
+ * @LastEditors: ibegyourpardon
  * @LastEditTime: 2023-05-05 23:18:37
  * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/index.vue
 -->
@@ -10,12 +16,14 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
+    <SearchBar />
     <IndexSwiper />
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import SearchBar from './components/SearchBar.vue';
 import IndexSwiper from './components/IndexSwiper.vue';
 const title = ref('Hello')
 </script>
