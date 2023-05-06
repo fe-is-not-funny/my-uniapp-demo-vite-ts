@@ -1,7 +1,7 @@
 //
 // Date: 2023-05-06 00:01:11
 // LastEditors: ibegyourpardon
-// LastEditTime: 2023-05-06 00:03:22
+// LastEditTime: 2023-05-06 11:35:43
 // FilePath: /my-uniapp-demo-vite-ts/src/utils/screen.js
 //
 // create a function to get miniprogram screen width and height
