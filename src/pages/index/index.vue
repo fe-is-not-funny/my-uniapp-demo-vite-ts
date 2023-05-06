@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-03-20 15:48:19
  * @LastEditors: ibegyourpardon
- * @LastEditTime: 2023-05-06 00:19:08
+ * @LastEditTime: 2023-05-06 12:13:58
  * @FilePath: /my-uniapp-demo-vite-ts/src/pages/index/index.vue
 -->
 <template>
@@ -21,14 +21,17 @@
     <SearchBar />
     <IndexSwiper />
   </view>
+  <CustomTabBar  />
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import SearchBar from './components/SearchBar.vue';
 import IndexSwiper from './components/IndexSwiper.vue';
+import CustomTabBar from '@/custom-tab-bar/index.vue';
 
 import { getCapsuleButtonInfo } from '@/utils/screen.js';
+
 
 const title = ref('Hello')
 

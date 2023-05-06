@@ -13,10 +13,13 @@
       nickname="acbc"
     />
   </view>
+  <CustomTabBar />
+
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import CustomTabBar from '@/custom-tab-bar/index.vue';
 
 import NickName from './components/nickname.vue';
 
