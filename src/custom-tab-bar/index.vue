@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-05-06 12:08:05
  * @LastEditors: ibegyourpardon
- * @LastEditTime: 2023-05-06 12:58:17
+ * @LastEditTime: 2023-05-06 14:53:01
  * @FilePath: /my-uniapp-demo-vite-ts/src/custom-tab-bar/index.vue
 -->
     <template>
@@ -30,18 +30,23 @@ import { ref, onMounted } from 'vue'
     const selected = computed(() => store.current)
 
     const switchTab = (index: number) => {
-        store.setCurrent(index)
         if (index === 2 &&!user.isLogin) {
           uni.showToast({
             title: '请先登录',
             icon: 'none',
-            duration: 2000
-          }).then(() => {
-            uni.switchTab({
+            duration: 2000,
+            success: () => {
+              setTimeout(() => {
+                store.setCurrent(index)
+                uni.switchTab({
               url: '/pages/profile/index'
             })
+              }, 1000)
+
+            }
           })
         } else {
+          store.setCurrent(index)
           uni.switchTab({
             url: store.list[index].pagePath
         })
