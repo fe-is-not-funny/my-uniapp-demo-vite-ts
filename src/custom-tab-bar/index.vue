@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-05-06 12:08:05
  * @LastEditors: ibegyourpardon
- * @LastEditTime: 2023-05-06 14:53:01
+ * @LastEditTime: 2023-05-06 17:02:47
  * @FilePath: /my-uniapp-demo-vite-ts/src/custom-tab-bar/index.vue
 -->
     <template>
@@ -37,7 +37,7 @@ import { ref, onMounted } from 'vue'
             duration: 2000,
             success: () => {
               setTimeout(() => {
-                store.setCurrent(index)
+                store.setCurrent(4)
                 uni.switchTab({
               url: '/pages/profile/index'
             })
